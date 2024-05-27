@@ -18,7 +18,7 @@ editbtn.innerHTML = "EDIT"
 editbtn.setAttribute("onclick", "edit(this)")
 editbtn.style.background = "black"
 editbtn.style.color = "white"
-editbtn.style.maxWidth = "12%"
+// editbtn.style.maxWidth = "12%"
 editbtn.style.height = "30px"
 // editbtn.style.marginLeft = "420px"
 
@@ -26,7 +26,7 @@ var delbtn =document.createElement('button')
 delbtn.innerHTML = "DELETE"
 delbtn.style.background = "black"
 delbtn.style.color = "white"
-delbtn.style.maxWidth = "12%"
+// delbtn.style.maxWidth = "12%"
 delbtn.style.height = "30px"
 delbtn.setAttribute("onclick","deleteRow(this)")
 
@@ -55,15 +55,20 @@ el.parentNode.remove()
 
 
 
-function edit(el){
-    // el.innerHTML = document.createElement("input")
- var input = document.getElementById("input")
-//  input.value = el.parentnode
-console.log(el.parentNode.innerHTML);
+// function edit(el){
+//     // console.log(el.parentNode.firstChild.nodeValue); // node value is to get junk artifact value or node value which javascript consider it as element
+// var editValue = prompt("Edit your To Do",el.parentNode.firstChild.nodeValue)
+// el.parentNode.firstChild.nodeValue = editValue
     
+// }
+
+function edit(el){
+    el.parentNode.remove()
+    var input = document.createElement("input")
+    input.value = el.parentNode.firstChild.nodeValue 
+    list.appendChild(input)
+ 
 }
-
-
 
 
 

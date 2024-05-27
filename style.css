@@ -28,7 +28,7 @@ background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%)
     background-color: rgb(41, 41, 41);
 
     color: white;
-    width: 20%;
+    /* width: 20%; */
     height: 30px;
 }
 #parent div button:hover{
