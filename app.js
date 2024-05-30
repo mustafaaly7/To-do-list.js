@@ -58,6 +58,10 @@ el.parentNode.remove()
 function edit(el){
     // console.log(el.parentNode.firstChild.nodeValue); // node value is to get junk artifact value or node value which javascript consider it as element
 var editValue = prompt("Edit your To Do",el.parentNode.firstChild.nodeValue)
+if(editValue.length < 3){
+    alert("enter correct To Do")
+    return
+}
 el.parentNode.firstChild.nodeValue = editValue
     
 }
